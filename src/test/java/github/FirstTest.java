@@ -8,6 +8,7 @@ import com.codeborne.selenide.AuthenticationType;
 import com.codeborne.selenide.BasicAuthCredentials;
 import com.codeborne.selenide.Selenide;
 import com.codeborne.selenide.WebDriverConditions;
+import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
 import java.sql.Time;
@@ -46,5 +47,10 @@ public class FirstTest {
         $("#column-a").dragAndDropTo("#column-b");
         sleep(2000);
         $$("div#columns div header").get(0).shouldHave(text("B"));
+    }
+
+    @Test
+    void fifthMethod(){
+        Assertions.assertTrue(3 > 2);
     }
 }
